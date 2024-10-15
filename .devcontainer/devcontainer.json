@@ -1,0 +1,44 @@
+{
+  "name": "Java Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven python3-pip python3-venv nodejs && source venv/bin/activate && pip3 install pre-commit && pip install pre-commit && javac --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "shengchen.vscode-checkstyle",
+        "editorconfig.editorconfig",
+        "sonarsource.sonarlint-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "GitHub.copilot",
+        "Catppuccin.catppuccin-vsc",
+        "Catppuccin.catppuccin-vsc-icons"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "java.configuration.updateBuildConfiguration": "interactive",
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        "java.format.settings.profile": "GoogleStyle",
+        "files.autoSave": "afterDelay",
+        "editor.fontSize": 14,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+        "workbench.colorTheme": "Catppuccin Macchiato",
+        "workbench.iconTheme": "catppuccin-macchiato",
+        "cSpell.words": [
+          "Catppuccin",
+          "checkstyle",
+          "devcontainers",
+          "javac",
+          "Macchiato",
+          "shengchen",
+          "sonarlint",
+          "sonarsource",
+          "venv",
+          "vscjava"
+        ]
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

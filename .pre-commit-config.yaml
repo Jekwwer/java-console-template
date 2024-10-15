@@ -1,0 +1,31 @@
+# ========================================================
+# .pre-commit-config.yaml
+# ========================================================
+# Project Name: PROJECT_NAME
+# Description: This configuration file sets up pre-commit hooks
+#              for automatically checking and formatting code
+#              before commits.
+#
+# Repository: https://github.com/GITHUB_AUTHOR_HANDLE/REPO_NAME
+# Author: AUTHOR_NAME
+#
+# Date: CURRENT_DATE
+# ========================================================
+
+repos:
+  - repo: https://github.com/detailyang/pre-commit-java
+    rev: v1.0.2
+    hooks:
+      - id: java-checkstyle
+        args: ["-c", "google_checks.xml"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+# ========================================================
+# End of .pre-commit-config.yaml
+# ========================================================
